@@ -334,7 +334,7 @@ function initMap() {
           let pied =   response.routes[0].legs[0].duration.text
           document.getElementById("pied").innerHTML = pied
           infoPied =  response.routes[0].legs[0].duration.value
-          recommendation()
+           
         } else {
           window.alert("Directions request failed due to " + status);
         }
@@ -363,7 +363,7 @@ let password = '';
     let tempsConverti= moment.unix(tempsNativia).utc().format('H [h] m [minutes] ')
     document.getElementById("nativia").innerHTML = tempsConverti
  
-
+recommendation()
    
  
    
