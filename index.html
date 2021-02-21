@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://weareoutman.github.io/clockpicker/dist/jquery-clockpicker.min.css"></link>
+    
+ 
+  
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script> -->
+  
+ 
+ 
+  
+  </head>
+  <body>
+<div class="tempsPrepa">
+  <h3>Entrer votre temps de preparation de votre reveil a votre depart</br> essayez d'etre le plus precis possible afin nous aider a calculer le meilleur temps</h3>
+
+  <input type="text" name="time" placeholder = "Temps de preparation">
+</div>
+ 
+
+    <div class="dis">
+
+  
+      <div id="locationField">
+        <input
+          id="autocomplete"
+          placeholder="Enter your address"
+          type="text"
+        />
+       
+       
+        
+      </div>
+      <div class="count">
+        <p>Adress <span id="adresseNumber">0</span>/2</p>
+  
+      </div>
+      </div>
+   
+  
+      <table id="address">
+        <tr>
+          <td class="label">Street address</td>
+          <td class="slimField">
+            <input class="field" id="street_number" disabled="true" />
+          </td>
+          <td class="wideField" colspan="2">
+            <input class="field" id="route" disabled="true" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">City</td>
+          <td class="wideField" colspan="3">
+            <input class="field" id="locality" disabled="true" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">State</td>
+          <td class="slimField">
+            <input
+              class="field"
+              id="administrative_area_level_1"
+              disabled="true"
+            />
+          </td>
+          <td class="label">Zip code</td>
+          <td class="wideField">
+            <input class="field" id="postal_code" disabled="true" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Country</td>
+          <td class="wideField" colspan="3">
+            <input class="field" id="country" disabled="true" />
+          </td>
+        </tr>
+      </table>
+
+  
+  
+      <div>
+        <p>Temps estimé en Transport: <span id="time"></span> Arrivée a :<span id="arriveTransport"></span></p>
+        <p>Temps estimé en voiture: <span id="voiture"></span> Arrivée a :<span id="arriveVoiture"></span></p>
+        <p>Temps estimé en velo: <span id="velo"></span> Arrivée a :<span id="arriVevelo"></span></p>
+        <p>Temps estimé a pied: <span id="pied"></span> Arrivée a :<span id="arrivePied"></span></p>
+        <p>Temps estimé avec Nativia: <span id="nativia"> Arrivée a :<span id="arriveNativia"></span></span></p>
+      </div>
+  
+  
+  
+    </br>
+    <div id="sncf">
+      <input
+        id="gare1"
+        placeholder="gare de depart"
+        type="text"
+      />
+      <input
+      id="gare2"
+      placeholder="gare d'arrivée"
+      type="text"
+    />
+    <div>
+      <h5>Gare la plus proche de vous : <span id="gareLaPlusProche"></span></h5>
+      <div class="depart train">
+        <p> Prochain depart train :</p>
+      </br>
+      
+  <table id="customers">
+    <tr>
+     
+      <th>DEPART</th>
+      <th>ARRIVEE</th>
+    </tr>
+    <tr>
+      <td id="depart1"></td>
+  
+    </tr>
+  
+    
+  </table>
+  
+      </div>
+      <div>
+          <h4 id="recommendation"></h4>
+      </div>
+    </div>
+
+<div class="conteneur-map">
+    <div id="right-panel"></div>
+    <div id="map"></div>
+
+</div> 
+
+
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAURsom7c-jmbNERN0wVqb4OzVten2Hy24&callback=initAutocomplete&libraries=places&v=weekly"
+    defer
+    ></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://weareoutman.github.io/clockpicker/dist/jquery-clockpicker.min.js"></script>
+
+<script src="index.js"></script>
+
+  </body>
+</html>
