@@ -94,7 +94,7 @@ function geocode (){
     console.log(locationAdresse)
     axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${locationAdresse}&key=${key}`)
     .then(function(response){
-    
+     console.log(response)
       if( adress1Lat == null) {
         adress1Lat = response.data.results[0].geometry.location.lat
         adress1Lng = response.data.results[0].geometry.location.lng
